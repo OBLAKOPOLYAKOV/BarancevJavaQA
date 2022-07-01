@@ -6,23 +6,15 @@ public class MyFirstProgram {
         hello("Alex");
         hello("World");
 
-        double len = 5;
-        System.out.println("Площадь квадрата со сторонной" + len+ " = " + area(len));
-        double a = 4;
-        double b = 5;
-        System.out.println("Площать прямоугольника со сторонами "+a + " и "+ b " = "+area(a,b));
+        Square s = new Square(5);
+        System.out.println("Площадь квадрата со сторонной" + s.l+ " = " + s.area());
+
+        Rectangle r = new Rectangle(4,5);
+        System.out.println("Площать прямоугольника со сторонами "+r.a + " и "+ r.b +" = "+r.area());
     }
 
     public static void hello(String name){
         System.out.println("Hello, "+name + "!");
-    }
-
-    public static double area (double i){
-        return i*i;
-    }
-
-    public static double area(double a, double b){
-        return a*b;
     }
 }
 
