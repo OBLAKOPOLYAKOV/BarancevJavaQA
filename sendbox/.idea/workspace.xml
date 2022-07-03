@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a94a638-4e3b-477b-916a-1131abe72ef1" name="Changes" comment="" />
+    <list default="true" id="4a94a638-4e3b-477b-916a-1131abe72ef1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +16,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sendbox" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,12 +59,27 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/javacourse/BarancevJavaQA/sendbox&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/javacourse/BarancevJavaQA/sendbox&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SquareTests">
+  <component name="RunManager" selected="Application.getDistance">
     <configuration name="MyFirstProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.sandbox.MyFirstProgram" />
+      <module name="sendbox.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.sandbox.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="getDistance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.sandbox.getDistance" />
       <module name="sendbox.main" />
       <extension name="coverage">
         <pattern>
@@ -76,6 +110,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.getDistance" />
         <item itemvalue="TestNG.SquareTests" />
         <item itemvalue="Application.MyFirstProgram" />
       </list>
