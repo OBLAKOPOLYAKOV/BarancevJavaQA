@@ -31,7 +31,7 @@ public class GroupCreationTests {
     public void testGroupCreation() throws Exception {
         goToGroupPage();
         initGroupCreation();
-        fillGroupForm(new GroupData("test2", "test1"));
+        fillGroupForm(new GroupData("test2", "test1", "test3"));
         submitGroupCreation();
         returnToGroupPage();
     }
@@ -51,6 +51,10 @@ public class GroupCreationTests {
         wd.findElement(By.name("group_header")).click();
         wd.findElement(By.name("group_header")).clear();
         wd.findElement(By.name("group_header")).sendKeys(groupData.header());
+        wd.findElement(By.name("group_footer")).click();
+        wd.findElement(By.name("group_footer")).clear();
+        wd.findElement(By.name("group_footer")).sendKeys(groupData.footer());
+
     }
 
     private void initGroupCreation() {
@@ -67,23 +71,4 @@ public class GroupCreationTests {
         wd.quit();
 
     }
-
-    private boolean isElementPresent(By by) {
-        try {
-            wd.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    private boolean isAlertPresent() {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
 }
