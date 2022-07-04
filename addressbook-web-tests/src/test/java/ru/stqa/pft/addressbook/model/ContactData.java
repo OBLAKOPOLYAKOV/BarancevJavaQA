@@ -1,4 +1,4 @@
-package ru.stqa.pft.addressbook;
+package ru.stqa.pft.addressbook.model;
 
 import java.util.Objects;
 
@@ -12,8 +12,8 @@ public final class ContactData {
     private final String bmonth;
     private final String byear;
 
-    ContactData(String firstname, String lastname, String address, String phone, String email, String bday,
-                String bmonth, String byear) {
+    public ContactData(String firstname, String lastname, String address, String phone, String email, String bday,
+                       String bmonth, String byear) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
