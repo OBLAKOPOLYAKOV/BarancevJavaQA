@@ -12,7 +12,6 @@ public class ContactCreationTests extends TestBase{
                 "Mikhail",
                 "Poliakov",
                 "Moscow, Pushkina, dom Kolotushkina",
-                "*9666666666",
                 "test@test.ru",
                 "27",
                 "September",
