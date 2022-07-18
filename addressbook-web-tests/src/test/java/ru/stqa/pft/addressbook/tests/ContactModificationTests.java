@@ -16,7 +16,9 @@ public class ContactModificationTests extends TestBase {
                 "test@test.ru",
                 "27",
                 "September",
-                "1996"));
+                "1996",
+                null),
+                false);
         app.getContactHelper().submitContactModificationUpper();
         app.getContactHelper().returnToContactPage();
     }
@@ -33,7 +35,9 @@ public class ContactModificationTests extends TestBase {
                 "test@test.ru",
                 "27",
                 "September",
-                "1996"));
+                "1996",
+                null),
+                false);
         app.getContactHelper().submitContactModificationAtTheBottom();
         app.getContactHelper().returnToContactPage();
     }

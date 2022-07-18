@@ -15,7 +15,9 @@ public class ContactCreationTests extends TestBase{
                 "test@test.ru",
                 "27",
                 "September",
-                "1996"));
+                "1996",
+                "test2"),
+                true);
         app.getContactHelper().submitContactCreation();
         app.getContactHelper().returnToContactPage();
     }
