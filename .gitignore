@@ -13,3 +13,22 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+addressbook-web-tests/.gradle/7.4.2/executionHistory/executionHistory.bin
+addressbook-web-tests/.gradle/7.4.2/executionHistory/executionHistory.lock
+addressbook-web-tests/.gradle/7.4.2/fileHashes/fileHashes.bin
+addressbook-web-tests/.gradle/7.4.2/fileHashes/fileHashes.lock
+addressbook-web-tests/.gradle/7.4.2/fileHashes/resourceHashesCache.bin
+addressbook-web-tests/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+addressbook-web-tests/build/classes/java/test/ru/stqa/pft/addressbook/appmanager/ContactHelper.class
+addressbook-web-tests/build/classes/java/test/ru/stqa/pft/addressbook/tests/ContactDeletionTests.class
+addressbook-web-tests/build/classes/java/test/ru/stqa/pft/addressbook/tests/ContactModificationTests.class
+addressbook-web-tests/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.ContactModificationTests.html
+addressbook-web-tests/build/reports/tests/test/classes/ru.stqa.pft.addressbook.tests.GroupModificationTests.html
+addressbook-web-tests/build/reports/tests/test/index.html
+addressbook-web-tests/build/reports/tests/test/packages/ru.stqa.pft.addressbook.tests.html
+addressbook-web-tests/build/test-results/test/binary/output.bin
+addressbook-web-tests/build/test-results/test/binary/output.bin.idx
+addressbook-web-tests/build/test-results/test/binary/results.bin
+addressbook-web-tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.ContactModificationTests.xml
+addressbook-web-tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupModificationTests.xml
+addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin
