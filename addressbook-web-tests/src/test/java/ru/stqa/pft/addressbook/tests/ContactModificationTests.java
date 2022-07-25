@@ -7,6 +7,18 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModificationAtTheUpper() {
         app.getNavigationHelper().goToHomaPage();
+        if ( !app.getContactHelper().isTheAContact()){
+            app.getContactHelper().createContact(new ContactData(
+                            "Mikhail",
+                            "Poliakov",
+                            "Moscow, Pushkina, dom Kolotushkina",
+                            "test@test.ru",
+                            "27",
+                            "September",
+                            "1996",
+                            "test2"),
+                    true);
+        }
         app.getContactHelper().selectContact();
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
@@ -26,6 +38,18 @@ public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModificationAtTheBottom() {
         app.getNavigationHelper().goToHomaPage();
+        if ( !app.getContactHelper().isTheAContact()){
+            app.getContactHelper().createContact(new ContactData(
+                            "Mikhail",
+                            "Poliakov",
+                            "Moscow, Pushkina, dom Kolotushkina",
+                            "test@test.ru",
+                            "27",
+                            "September",
+                            "1996",
+                            "test2"),
+                    true);
+        }
         app.getContactHelper().selectContact();
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
