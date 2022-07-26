@@ -32,3 +32,4 @@ addressbook-web-tests/build/test-results/test/binary/results.bin
 addressbook-web-tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.ContactModificationTests.xml
 addressbook-web-tests/build/test-results/test/TEST-ru.stqa.pft.addressbook.tests.GroupModificationTests.xml
 addressbook-web-tests/build/tmp/compileTestJava/previous-compilation-data.bin
+addressbook-web-tests/.gradle/7.4.2/executionHistory/executionHistory.lock
