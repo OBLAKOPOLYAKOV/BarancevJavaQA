@@ -10,7 +10,7 @@ public final class ContactData {
     private final String bday;
     private final String bmonth;
     private final String byear;
-    private String group;
+    private final String group;
 
     public ContactData(String firstname, String lastname, String address, String email, String bday,
                        String bmonth, String byear, String group) {

@@ -25,7 +25,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("byear"), contactData.byear());
 
         if (creation){
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+            new Select(wd.findElement(By.name("new_group"))).selectByIndex(0);
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -59,9 +59,9 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//input[@value='Update'][1]"));
     }
 
-    public void createContact(ContactData Contact, boolean Creation) {
+    public void createContact(ContactData contact) {
         initContactCreation();
-        fillContactForm(Contact, Creation);
+        fillContactForm(contact, true);
         submitContactCreation();
         returnToContactPage();
     }

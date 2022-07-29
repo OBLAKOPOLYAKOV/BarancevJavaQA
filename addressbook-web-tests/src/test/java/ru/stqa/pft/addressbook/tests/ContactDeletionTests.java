@@ -10,16 +10,14 @@ public class ContactDeletionTests extends TestBase{
         app.getNavigationHelper().goToHomaPage();
         if ( !app.getContactHelper().isTheAContact()){
             app.getContactHelper().createContact(new ContactData(
-                            "Mikhail",
-                            "Poliakov",
-                            "Moscow, Pushkina, dom Kolotushkina",
-                            "test@test.ru",
-                            "27",
-                            "September",
-                            "1996",
-                            "test2"),
-                    true);
-        }
+                    "Mikhail",
+                    "Poliakov",
+                    "Moscow, Pushkina, dom Kolotushkina",
+                    "test@test.ru",
+                    "27",
+                    "September",
+                    "1996",
+                    "test2"));}
         app.getContactHelper().selectContact();
         app.getContactHelper().initEditContact();
         app.getContactHelper().submitContactDeletion();
