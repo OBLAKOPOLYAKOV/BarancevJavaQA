@@ -5,6 +5,7 @@ import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.GroupData;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class ContactCreationTests extends TestBase{
@@ -17,7 +18,7 @@ public class ContactCreationTests extends TestBase{
             app.getGroupHelper().createGroup(new GroupData("test1", null, null));
         }
         app.getContactHelper().initContactCreation();
-        app.getContactHelper().createContact(new ContactData(
+        ContactData contact = new ContactData(
                 "Mikhail",
                 "Poliakov",
                 "Moscow, Pushkina, dom Kolotushkina",
@@ -25,9 +26,15 @@ public class ContactCreationTests extends TestBase{
                 "27",
                 "September",
                 "1996",
-                null));
+                null);
+        app.getContactHelper().createContact(contact);
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(),before.size()+1);
+
+
+        contact.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+        before.add(contact);
+        Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
     }
 
 }
