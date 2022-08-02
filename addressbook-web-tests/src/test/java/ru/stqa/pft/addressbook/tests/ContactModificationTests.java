@@ -20,7 +20,7 @@ public class ContactModificationTests extends TestBase {
                     null));
         }
         int before = app.getContactHelper().getContactCount();
-        app.getContactHelper().selectContact();
+        app.getContactHelper().selectContact(0);
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
                 "Mikhail",
@@ -53,7 +53,7 @@ public class ContactModificationTests extends TestBase {
                     null));
         }
         int before = app.getContactHelper().getContactCount();
-        app.getContactHelper().selectContact();
+        app.getContactHelper().selectContact(before-1);
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
                 "Mikhail",
