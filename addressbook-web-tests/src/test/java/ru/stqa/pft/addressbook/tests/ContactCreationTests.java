@@ -21,7 +21,7 @@ public class ContactCreationTests extends TestBase{
                 "27",
                 "September",
                 "1996",
-                null));
+                "test2"));
     }
 
 }
