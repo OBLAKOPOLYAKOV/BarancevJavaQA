@@ -16,7 +16,7 @@ public class ContactModificationTests extends TestBase {
                     "27",
                     "September",
                     "1996",
-                    "test2"));
+                    null));
         }
         app.getContactHelper().selectContact();
         app.getContactHelper().initEditContact();
@@ -46,7 +46,7 @@ public class ContactModificationTests extends TestBase {
                     "27",
                     "September",
                     "1996",
-                    "test2"));
+                    null));
         }
         app.getContactHelper().selectContact();
         app.getContactHelper().initEditContact();
