@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
+import java.util.List;
+
 public class ContactModificationTests extends TestBase {
     @Test
     public void testContactModificationAtTheUpper() {
@@ -19,7 +21,7 @@ public class ContactModificationTests extends TestBase {
                     "1996",
                     null));
         }
-        int before = app.getContactHelper().getContactCount();
+        List<ContactData> before = app.getContactHelper().getContactList();
         app.getContactHelper().selectContact(0);
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
@@ -34,8 +36,8 @@ public class ContactModificationTests extends TestBase {
                 false);
         app.getContactHelper().submitContactModificationUpper();
         app.getContactHelper().returnToContactPage();
-        int after = app.getContactHelper().getContactCount();
-        Assert.assertEquals(after,before);
+        List<ContactData> after = app.getContactHelper().getContactList();
+        Assert.assertEquals(after.size(),before.size());
     }
 
     @Test
@@ -52,8 +54,8 @@ public class ContactModificationTests extends TestBase {
                     "1996",
                     null));
         }
-        int before = app.getContactHelper().getContactCount();
-        app.getContactHelper().selectContact(before-1);
+        List<ContactData> before = app.getContactHelper().getContactList();
+        app.getContactHelper().selectContact(before.size()-1);
         app.getContactHelper().initEditContact();
         app.getContactHelper().fillContactForm(new ContactData(
                 "Mikhail",
@@ -67,7 +69,7 @@ public class ContactModificationTests extends TestBase {
                 false);
         app.getContactHelper().submitContactModificationAtTheBottom();
         app.getContactHelper().returnToContactPage();
-        int after = app.getContactHelper().getContactCount();
-        Assert.assertEquals(after,before);
+        List<ContactData> after = app.getContactHelper().getContactList();
+        Assert.assertEquals(after.size(),before.size());
     }
 }
