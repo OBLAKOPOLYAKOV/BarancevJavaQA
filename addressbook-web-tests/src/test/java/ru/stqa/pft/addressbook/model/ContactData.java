@@ -18,6 +18,19 @@ public final class ContactData {
     private final String byear;
     private final String group;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname) && Objects.equals(address, that.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstname, lastname, address);
+    }
+
     public ContactData(int id, String firstname, String lastname, String address, String email, String bday,
                        String bmonth, String byear, String group) {
         this.id = id;
@@ -33,7 +46,7 @@ public final class ContactData {
 
     public ContactData(String firstname, String lastname, String address, String email, String bday,
                        String bmonth, String byear, String group) {
-        this.id = 0;
+        this.id = Integer.MAX_VALUE;
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -106,16 +119,4 @@ public final class ContactData {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname) && Objects.equals(address, that.address);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname, address);
-    }
 }
