@@ -22,8 +22,9 @@ public class ContactModificationTests extends TestBase {
                     null));
         }
         List<ContactData> before = app.getContactHelper().getContactList();
-        app.getContactHelper().selectContact(0);
-        app.getContactHelper().initEditContact();
+        int contactNumber = 0;
+        app.getContactHelper().selectContact(contactNumber);
+        app.getContactHelper().initEditContact(contactNumber);
         app.getContactHelper().fillContactForm(new ContactData(
                 "Mikhail",
                 "Poliakov",
@@ -55,8 +56,9 @@ public class ContactModificationTests extends TestBase {
                     null));
         }
         List<ContactData> before = app.getContactHelper().getContactList();
-        app.getContactHelper().selectContact(before.size()-1);
-        app.getContactHelper().initEditContact();
+        int contactNumber = before.size()-1;
+        app.getContactHelper().selectContact(contactNumber);
+        app.getContactHelper().initEditContact(contactNumber);
         app.getContactHelper().fillContactForm(new ContactData(
                 "Mikhail",
                 "Poliakov",
