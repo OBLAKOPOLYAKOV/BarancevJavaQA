@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTests extends TestBase {
@@ -25,7 +26,7 @@ public class ContactModificationTests extends TestBase {
         int contactNumber = 0;
         app.getContactHelper().selectContact(contactNumber);
         app.getContactHelper().initEditContact(contactNumber);
-        app.getContactHelper().fillContactForm(new ContactData(
+        ContactData contact = new ContactData(before.get(contactNumber).getId(),
                 "Mikhail",
                 "Poliakov",
                 "Moscow, Pushkina, dom Kolotushkina",
@@ -33,12 +34,17 @@ public class ContactModificationTests extends TestBase {
                 "27",
                 "September",
                 "1996",
-                null),
+                null);
+        app.getContactHelper().fillContactForm(contact,
                 false);
         app.getContactHelper().submitContactModificationUpper();
         app.getContactHelper().returnToContactPage();
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(),before.size());
+
+        before.remove(contactNumber);
+        before.add(contact);
+        Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
     }
 
     @Test
@@ -59,7 +65,7 @@ public class ContactModificationTests extends TestBase {
         int contactNumber = before.size()-1;
         app.getContactHelper().selectContact(contactNumber);
         app.getContactHelper().initEditContact(contactNumber);
-        app.getContactHelper().fillContactForm(new ContactData(
+        ContactData contact = new ContactData(before.get(contactNumber).getId(),
                 "Mikhail",
                 "Poliakov",
                 "Moscow, Pushkina, dom Kolotushkina",
@@ -67,11 +73,16 @@ public class ContactModificationTests extends TestBase {
                 "27",
                 "September",
                 "1996",
-                null),
+                null);
+        app.getContactHelper().fillContactForm(contact,
                 false);
         app.getContactHelper().submitContactModificationAtTheBottom();
         app.getContactHelper().returnToContactPage();
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(),before.size());
+
+        before.remove(contactNumber);
+        before.add(contact);
+        Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
     }
 }
