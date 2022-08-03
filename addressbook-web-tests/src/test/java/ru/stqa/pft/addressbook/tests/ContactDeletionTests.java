@@ -11,15 +11,14 @@ public class ContactDeletionTests extends TestBase{
     public void testContactDeletion() {
         app.goTo().homaPage();
         if ( app.contact().list().size()==0){
-            app.contact().create(new ContactData(
-                    "Mikhail",
-                    "Poliakov",
-                    "Moscow, Pushkina, dom Kolotushkina",
-                    "test@test.ru",
-                    "27",
-                    "September",
-                    "1996",
-                    null));
+            app.contact().create(new ContactData()
+                    .withFirstname("Mikhail")
+                    .withLastname("Poliakov")
+                    .withAddress("Moscow, Pushkina, dom Kolotushkina")
+                    .withEmail("test@test.ru")
+                    .withBday("27")
+                    .withBmonth("September")
+                    .withByear("1996"));
         }
         List<ContactData> before = app.contact().list();
         int contactNumber = before.size() - 1;

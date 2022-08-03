@@ -2,52 +2,57 @@ package ru.stqa.pft.addressbook.model;
 
 import java.util.Objects;
 
-public final class GroupData {
-    public int id;
-    public final String name;
+public class GroupData {
+    private int id= Integer.MAX_VALUE;;
+    private  String name;
+    private  String header;
+    private  String footer;
 
-    public final String header;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public final String footer;
-
-    public GroupData(int id, String name, String header, String footer) {
-        this.id = id;
-        this.name = name;
-        this.header = header;
-        this.footer = footer;
-    }
-
-    public GroupData(String name, String header, String footer) {
-        this.id = Integer.MAX_VALUE;
-        this.name = name;
-        this.header = header;
-        this.footer = footer;
-    }
 
     public int getId() {
+
         return id;
     }
 
     public String getName() {
+
         return name;
     }
 
     public String name() {
+
         return name;
     }
 
     public String header() {
+
         return header;
     }
 
     public String footer() {
+
         return footer;
     }
 
+    public GroupData withName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public GroupData withHeader(String header) {
+        this.header = header;
+        return this;
+    }
+
+    public GroupData withFooter(String footer) {
+        this.footer = footer;
+        return this;
+    }
+    public GroupData withId(int id) {
+        this.id = id;
+        return this;
+    }
+    
     @Override
     public String toString() {
         return "GroupData{" +

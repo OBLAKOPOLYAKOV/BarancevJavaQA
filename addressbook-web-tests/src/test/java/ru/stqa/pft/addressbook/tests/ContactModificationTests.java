@@ -13,30 +13,28 @@ public class ContactModificationTests extends TestBase {
     public void ensurePrecondition(){
         app.goTo().homaPage();
         if ( app.contact().list().size()==0){
-            app.contact().create(new ContactData(
-                    "Mikhail",
-                    "Poliakov",
-                    "Moscow, Pushkina, dom Kolotushkina",
-                    "test@test.ru",
-                    "27",
-                    "September",
-                    "1996",
-                    null));
+            app.contact().create(new ContactData()
+                    .withFirstname("Mikhail")
+                    .withLastname("Poliakov")
+                    .withAddress("Moscow, Pushkina, dom Kolotushkina")
+                    .withEmail("test@test.ru")
+                    .withBday("27")
+                    .withBmonth("September")
+                    .withByear("1996"));
         }
     }
     @Test
     public void testContactModificationAtTheUpper() {
         List<ContactData> before = app.contact().list();
         int contactNumber = 0;
-        ContactData contact = new ContactData(before.get(contactNumber).getId(),
-                "Mikhail",
-                "Poliakov",
-                "Moscow, Pushkina, dom Kolotushkina",
-                "test@test.ru",
-                "27",
-                "September",
-                "1996",
-                null);
+        ContactData contact = new ContactData().withId(before.get(contactNumber).getId())
+                .withFirstname("Mikhail")
+                .withLastname("Poliakov")
+                .withAddress("Moscow, Tverskaya-Yamskaya, dom 24")
+                .withEmail("test@test.ru")
+                .withBday("27")
+                .withBmonth("September")
+                .withByear("1996");
         app.contact().modify(contactNumber, contact);
         List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(),before.size());
@@ -53,15 +51,14 @@ public class ContactModificationTests extends TestBase {
     public void testContactModificationAtTheBottom() {
         List<ContactData> before = app.contact().list();
         int contactNumber = before.size()-1;
-        ContactData contact = new ContactData(before.get(contactNumber).getId(),
-                "Mikhail",
-                "Poliakov",
-                "Moscow, Pushkina, dom Kolotushkina",
-                "test@test.ru",
-                "27",
-                "September",
-                "1996",
-                null);
+        ContactData contact = new ContactData().withId(before.get(contactNumber).getId())
+                .withFirstname("Mikhail")
+                .withLastname("Poliakov")
+                .withAddress("Moscow, Tverskaya-Yamskaya, dom 24")
+                .withEmail("test@test.ru")
+                .withBday("27")
+                .withBmonth("September")
+                .withByear("1996");
         app.contact().modify(contactNumber, contact);
         List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(),before.size());

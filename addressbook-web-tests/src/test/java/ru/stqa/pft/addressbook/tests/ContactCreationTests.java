@@ -14,7 +14,7 @@ public class ContactCreationTests extends TestBase{
     public void ensurePrecondition(){
         app.goTo().groupPage();
         if  (app.group().list().size() == 0){
-            app.group().create(new GroupData("test1", null, null));
+            app.group().create(new GroupData().withName("test2"));
         }
         app.goTo().homaPage();
     }
@@ -24,21 +24,19 @@ public class ContactCreationTests extends TestBase{
 
         List<ContactData> before = app.contact().list();
         app.contact().initCreation();
-        ContactData contact = new ContactData(
-                "Mikhail",
-                "Poliakov",
-                "Moscow, Pushkina, dom Kolotushkina",
-                "test@test.ru",
-                "27",
-                "September",
-                "1996",
-                null);
+        ContactData contact = new ContactData()
+                .withFirstname("Mikhail")
+                .withLastname("Poliakov")
+                .withAddress("Moscow, Pushkina, dom Kolotushkina")
+                .withEmail("test@test.ru")
+                .withBday("27")
+                .withBmonth("September")
+                .withByear("1996");
         app.contact().create(contact);
         List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size()+1);
 
-
-        contact.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
+        contact.withId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
         before.add(contact);
         Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
         before.sort(byId);
