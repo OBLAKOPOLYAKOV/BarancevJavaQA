@@ -9,7 +9,7 @@ public class NavigationHelper extends SessionHelper {
         super(wd);
     }
 
-    public void goToGroupPage() {
+    public void groupPage() {
         if(isElementPresent(By.tagName("h1"))
                 && wd.findElement(By.tagName("h1")).getText().equals("Groups")
                 && isElementPresent(By.name("new"))) {
@@ -18,7 +18,7 @@ public class NavigationHelper extends SessionHelper {
         click(By.linkText("groups"));
     }
 
-    public void goToHomaPage() {
+    public void homaPage() {
         if(isElementPresent(By.id("maintable"))){
             return;
         }

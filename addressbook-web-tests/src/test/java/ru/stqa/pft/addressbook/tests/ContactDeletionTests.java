@@ -3,16 +3,15 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
-import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.List;
 
 public class ContactDeletionTests extends TestBase{
     @Test
     public void testContactDeletion() {
-        app.getNavigationHelper().goToHomaPage();
-        if (!app.getContactHelper().isTheAContact()) {
-            app.getContactHelper().createContact(new ContactData(
+        app.goTo().homaPage();
+        if ( app.contact().list().size()==0){
+            app.contact().create(new ContactData(
                     "Mikhail",
                     "Poliakov",
                     "Moscow, Pushkina, dom Kolotushkina",
@@ -22,17 +21,16 @@ public class ContactDeletionTests extends TestBase{
                     "1996",
                     null));
         }
-        List<ContactData> before = app.getContactHelper().getContactList();
+        List<ContactData> before = app.contact().list();
         int contactNumber = before.size() - 1;
-        app.getContactHelper().selectContact(contactNumber);
-        app.getContactHelper().initEditContact(contactNumber);
-        app.getContactHelper().submitContactDeletion();
-        app.getNavigationHelper().goToHomaPage();
-        List<ContactData> after = app.getContactHelper().getContactList();
+        app.contact().delete(contactNumber);
+        app.goTo().homaPage();
+        List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size() - 1);
 
         before.remove(before.size() - 1);
         Assert.assertEquals(before, after);
 
     }
+
 }

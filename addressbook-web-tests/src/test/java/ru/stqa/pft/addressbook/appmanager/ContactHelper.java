@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-import java.nio.file.WatchEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class ContactHelper extends HelperBase{
         }
     }
 
-    public void initContactCreation() {
+    public void initCreation() {
         click(By.linkText("add new"));
     }
 
@@ -64,19 +63,25 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//input[@value='Update'][1]"));
     }
 
-    public void createContact(ContactData contact) {
-        initContactCreation();
+    public void create(ContactData contact) {
+        initCreation();
         fillContactForm(contact, true);
         submitContactCreation();
         returnToContactPage();
     }
 
-    public void modifyContact(int contactNumber, ContactData contact) {
+    public void modify(int contactNumber, ContactData contact) {
         selectContact(contactNumber);
         initEditContact(contactNumber);
         fillContactForm(contact, false);
         submitContactModificationUpper();
         returnToContactPage();
+    }
+
+    public void delete(int index) {
+        selectContact(index);
+        initEditContact(index);
+        submitContactDeletion();
     }
 
     public boolean isTheAContact() {
@@ -87,7 +92,7 @@ public class ContactHelper extends HelperBase{
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> list() {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement>elements = wd.findElements(By.cssSelector("tr[name='entry']"));
         for (WebElement element:elements){

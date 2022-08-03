@@ -6,15 +6,14 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition(){
-        app.getNavigationHelper().goToHomaPage();
-        if ( !app.getContactHelper().isTheAContact()){
-            app.getContactHelper().createContact(new ContactData(
+        app.goTo().homaPage();
+        if ( app.contact().list().size()==0){
+            app.contact().create(new ContactData(
                     "Mikhail",
                     "Poliakov",
                     "Moscow, Pushkina, dom Kolotushkina",
@@ -27,7 +26,7 @@ public class ContactModificationTests extends TestBase {
     }
     @Test
     public void testContactModificationAtTheUpper() {
-        List<ContactData> before = app.getContactHelper().getContactList();
+        List<ContactData> before = app.contact().list();
         int contactNumber = 0;
         ContactData contact = new ContactData(before.get(contactNumber).getId(),
                 "Mikhail",
@@ -38,8 +37,8 @@ public class ContactModificationTests extends TestBase {
                 "September",
                 "1996",
                 null);
-        app.getContactHelper().modifyContact(contactNumber, contact);
-        List<ContactData> after = app.getContactHelper().getContactList();
+        app.contact().modify(contactNumber, contact);
+        List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(),before.size());
 
         before.remove(contactNumber);
@@ -52,7 +51,7 @@ public class ContactModificationTests extends TestBase {
 
     @Test
     public void testContactModificationAtTheBottom() {
-        List<ContactData> before = app.getContactHelper().getContactList();
+        List<ContactData> before = app.contact().list();
         int contactNumber = before.size()-1;
         ContactData contact = new ContactData(before.get(contactNumber).getId(),
                 "Mikhail",
@@ -63,8 +62,8 @@ public class ContactModificationTests extends TestBase {
                 "September",
                 "1996",
                 null);
-        app.getContactHelper().modifyContact(contactNumber, contact);
-        List<ContactData> after = app.getContactHelper().getContactList();
+        app.contact().modify(contactNumber, contact);
+        List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(),before.size());
 
         before.remove(contactNumber);
