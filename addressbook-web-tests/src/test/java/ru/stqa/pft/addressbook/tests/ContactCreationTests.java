@@ -11,13 +11,19 @@ import java.util.List;
 
 public class ContactCreationTests extends TestBase{
 
-    @Test
-    public void testContactCreation(){
-        List<ContactData> before = app.getContactHelper().getContactList();
+    @BeforeMethod
+    public void ensurePrecondition(){
         app.getNavigationHelper().goToGroupPage();
         if ( !app.getGroupHelper().isTheAGroup()){
             app.getGroupHelper().createGroup(new GroupData("test1", null, null));
         }
+        app.getNavigationHelper().goToHomaPage();
+    }
+
+    @Test
+    public void testContactCreation(){
+
+        List<ContactData> before = app.getContactHelper().getContactList();
         app.getContactHelper().initContactCreation();
         ContactData contact = new ContactData(
                 "Mikhail",
@@ -30,7 +36,7 @@ public class ContactCreationTests extends TestBase{
                 null);
         app.getContactHelper().createContact(contact);
         List<ContactData> after = app.getContactHelper().getContactList();
-        Assert.assertEquals(after.size(),before.size()+1);
+        Assert.assertEquals(after.size(), before.size()+1);
 
 
         contact.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());

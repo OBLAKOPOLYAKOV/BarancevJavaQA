@@ -10,6 +10,7 @@ import java.util.List;
 public class ContactDeletionTests extends TestBase{
     @Test
     public void testContactDeletion() {
+        app.getNavigationHelper().goToHomaPage();
         if (!app.getContactHelper().isTheAContact()) {
             app.getContactHelper().createContact(new ContactData(
                     "Mikhail",
