@@ -3,6 +3,7 @@ package ru.stqa.pft.addressbook.tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.ContactData;
+import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 import java.util.Comparator;
@@ -23,7 +24,7 @@ public class ContactCreationTests extends TestBase{
     @Test
     public void testContactCreation(){
 
-        Set<ContactData> before = app.contact().all();
+        Contacts before = app.contact().all();
         app.contact().initCreation();
         ContactData contact = new ContactData()
                 .withFirstname("Mikhail")
@@ -34,7 +35,7 @@ public class ContactCreationTests extends TestBase{
                 .withBmonth("September")
                 .withByear("1996");
         app.contact().create(contact);
-        Set<ContactData> after = app.contact().all();
+        Contacts after = app.contact().all();
         Assert.assertEquals(after.size(), before.size()+1);
 
         contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt());
