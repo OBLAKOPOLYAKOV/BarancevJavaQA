@@ -70,6 +70,7 @@ public class ContactHelper extends HelperBase{
         initCreation();
         fillContactForm(contact, true);
         submitContactCreation();
+        contactCashe = null;
         returnToContactPage();
     }
 
@@ -80,6 +81,7 @@ public class ContactHelper extends HelperBase{
         if (upperBotton){
             submitContactModificationUpper();}
         else {submitContactModificationAtTheBottom();}
+        contactCashe = null;
         returnToContactPage();
     }
 
@@ -87,6 +89,7 @@ public class ContactHelper extends HelperBase{
         selectContactById(contact.getId());
         initEditContactById(contact.getId());
         submitContactDeletion();
+        contactCashe = null;
     }
 
     public boolean isTheAContact() {
@@ -97,8 +100,13 @@ public class ContactHelper extends HelperBase{
         return wd.findElements(By.name("selected[]")).size();
     }
 
+    private Contacts contactCashe = null;
+
     public Contacts all() {
-        Contacts contacts = new Contacts();
+        if(contactCashe != null){
+            return new Contacts(contactCashe);
+        }
+        contactCashe = new Contacts();
         List<WebElement>elements = wd.findElements(By.cssSelector("tr[name='entry']"));
         for (WebElement element:elements){
             List<WebElement>cells = element.findElements(By.tagName("td"));
@@ -107,10 +115,10 @@ public class ContactHelper extends HelperBase{
             String address = cells.get(3).getText();
             int id =Integer.parseInt(element.findElement(By.cssSelector("input[type='checkbox']"))
                     .getAttribute("id"));
-            contacts.add(new ContactData()
+            contactCashe.add(new ContactData()
                     .withId(id).withFirstname(firstName).withLastname(lastName).withAddress(address));
         }
-        return contacts;
+        return new Contacts(contactCashe);
     }
 
 }
