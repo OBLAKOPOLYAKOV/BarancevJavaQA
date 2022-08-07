@@ -110,12 +110,33 @@ public class ContactHelper extends HelperBase{
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
             String address = cells.get(3).getText();
+            String allEmails = cells.get(4).getText();
+            String allPhones = cells.get(5).getText();
             int id =Integer.parseInt(element.findElement(By.cssSelector("input[type='checkbox']"))
                     .getAttribute("id"));
             contactCashe.add(new ContactData()
-                    .withId(id).withFirstname(firstName).withLastname(lastName).withAddress(address));
+                    .withId(id).withFirstname(firstName).withLastname(lastName)
+                    .withAddress(address).withAllPhones(allPhones).withAllEmails(allEmails));
         }
         return new Contacts(contactCashe);
     }
 
+    public ContactData infoFromEditForm(ContactData contact) {
+        selectContactById(contact.getId());
+        initEditContactById(contact.getId());
+        String firstName = wd.findElement(By.name("firstname")).getAttribute("value");
+        String lastName = wd.findElement(By.name("lastname")).getAttribute("value");
+        String address = wd.findElement(By.name("address")).getAttribute("value");
+        String home = wd.findElement(By.name("home")).getAttribute("value");
+        String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
+        String work = wd.findElement(By.name("work")).getAttribute("value");
+        String email = wd.findElement(By.name("email")).getAttribute("value");;
+        String email2 = wd.findElement(By.name("email2")).getAttribute("value");;
+        String email3 = wd.findElement(By.name("email3")).getAttribute("value");;
+        wd.navigate().back();
+        return new ContactData().withFirstname(firstName).withLastname(lastName)
+                .withAddress(address).withHomePhone(home).withMobilePhone(mobile)
+                .withWorkPhone(work).withEmail(email).withEmail2(email2).withEmail3(email3);
+
+    }
 }
