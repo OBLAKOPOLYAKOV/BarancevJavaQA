@@ -3,7 +3,8 @@ package ru.stqa.pft.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-    private int id = Integer.MAX_VALUE;;
+    private int id = Integer.MAX_VALUE;
+    ;
     private String firstname;
     private String lastname;
     private String address;
@@ -15,6 +16,7 @@ public class ContactData {
     private String byear;
     private String group;
     private String homePhone;
+    private String home2Phone;
     private String workPhone;
     private String mobilePhone;
     private String allPhones;
@@ -33,7 +35,9 @@ public class ContactData {
         return address;
     }
 
-    public String allEmails(){return allEmails;}
+    public String allEmails() {
+        return allEmails;
+    }
 
     public String bday() {
         return bday;
@@ -46,13 +50,38 @@ public class ContactData {
     public String byear() {
         return byear;
     }
-    public String homePhone(){return homePhone;}
-    public String workPhone(){return workPhone;}
-    public String mobilePhone(){return mobilePhone;}
-    public String allPhones(){return allPhones;}
-    public String email(){return email;}
-    public String email2(){return email2;}
-    public String email3(){return email3;}
+
+    public String homePhone() {
+        return homePhone;
+    }
+
+    public String home2Phone() {
+        return home2Phone;
+    }
+
+    public String workPhone() {
+        return workPhone;
+    }
+
+    public String mobilePhone() {
+        return mobilePhone;
+    }
+
+    public String allPhones() {
+        return allPhones;
+    }
+
+    public String email() {
+        return email;
+    }
+
+    public String email2() {
+        return email2;
+    }
+
+    public String email3() {
+        return email3;
+    }
 
     public String getAllPhones() {
         return allPhones;
@@ -60,6 +89,10 @@ public class ContactData {
 
     public String getHomePhone() {
         return homePhone;
+    }
+
+    public String getHome2Phone() {
+        return home2Phone;
     }
 
     public String getWorkPhone() {
@@ -93,6 +126,7 @@ public class ContactData {
     public String getEmail() {
         return email;
     }
+
     public String getEmail2() {
         return email2;
     }
@@ -128,6 +162,11 @@ public class ContactData {
 
     public ContactData withHomePhone(String homePhone) {
         this.homePhone = homePhone;
+        return this;
+    }
+
+    public ContactData withHome2Phone(String home2Phone) {
+        this.home2Phone = home2Phone;
         return this;
     }
 
@@ -208,4 +247,5 @@ public class ContactData {
                 ", address='" + address + '\'' +
                 '}';
     }
+
 }
