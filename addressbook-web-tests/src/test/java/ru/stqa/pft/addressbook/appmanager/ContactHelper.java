@@ -23,6 +23,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("firstname"), contactData.firstname());
         type(By.name("lastname"), contactData.lastname());
         type(By.name("address"), contactData.address());
+        attach(By.name("photo"),contactData.photo());
         type(By.name("email"),contactData.email());
         selectedFromTheList(By.name("bday"), contactData.bday());
         selectedFromTheList(By.name("bmonth"), contactData.bmonth());

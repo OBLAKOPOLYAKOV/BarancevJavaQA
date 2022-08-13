@@ -19,6 +19,14 @@ public class GroupData {
         return name;
     }
 
+    public String getHeader() {
+        return header;
+    }
+
+    public String getFooter() {
+        return footer;
+    }
+
     public String name() {
 
         return name;
@@ -73,6 +81,4 @@ public class GroupData {
                 ", name='" + name + '\'' +
                 '}';
     }
-
-
 }
