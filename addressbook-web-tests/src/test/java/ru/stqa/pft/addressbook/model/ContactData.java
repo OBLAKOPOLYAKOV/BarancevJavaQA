@@ -34,6 +34,7 @@ public class ContactData {
     private String workPhone;
     @Expose
     private String mobilePhone;
+    @Expose
     private String allPhones;
     private String allEmails;
     private File photo;

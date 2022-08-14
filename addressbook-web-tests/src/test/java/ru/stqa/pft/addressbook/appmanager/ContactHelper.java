@@ -25,6 +25,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("address"), contactData.address());
         attach(By.name("photo"),contactData.photo());
         type(By.name("email"),contactData.email());
+        type(By.name("mobile"),contactData.mobilePhone());
         selectedFromTheList(By.name("bday"), contactData.bday());
         selectedFromTheList(By.name("bmonth"), contactData.bmonth());
         type(By.name("byear"), contactData.byear());
