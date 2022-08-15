@@ -1,0 +1,35 @@
+[
+  {
+    "firstname": "Name0",
+    "lastname": "LastName0",
+    "address": "Test Address h.0",
+    "email": "test0@test.com",
+    "bday": "21",
+    "bmonth": "September",
+    "byear": "1991",
+    "homePhone": "8(495)1678810",
+    "mobilePhone": "89197628410"
+  },
+  {
+    "firstname": "Name1",
+    "lastname": "LastName1",
+    "address": "Test Address h.1",
+    "email": "test1@test.com",
+    "bday": "21",
+    "bmonth": "September",
+    "byear": "1991",
+    "homePhone": "8(495)1678811",
+    "mobilePhone": "89197628411"
+  },
+  {
+    "firstname": "Name2",
+    "lastname": "LastName2",
+    "address": "Test Address h.2",
+    "email": "test2@test.com",
+    "bday": "21",
+    "bmonth": "September",
+    "byear": "1991",
+    "homePhone": "8(495)1678812",
+    "mobilePhone": "89197628412"
+  }
+]
