@@ -3,7 +3,6 @@ package ru.stqa.pft.addressbook.tests;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.thoughtworks.xstream.XStream;
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,7 +10,6 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 import ru.stqa.pft.addressbook.model.GroupData;
 
-import java.beans.Transient;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -30,35 +28,38 @@ public class ContactCreationTests extends TestBase{
     @DataProvider
     public Iterator<Object[]>validContactsFromXml() throws IOException {
         List<Object[]> List = new ArrayList<Object[]>();
-        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.xml")));
-        String xml="";
-        String line = reader.readLine();
-        while (line !=null){
-            xml+=line;
-            line = reader.readLine();
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.xml")))){
+            String xml="";
+            String line = reader.readLine();
+            while (line !=null){
+                xml+=line;
+                line = reader.readLine();
+            }
+            XStream xstream = new XStream();
+            xstream.processAnnotations(ContactData.class);
+            List<ContactData> groups = (List<ContactData>) xstream.fromXML(xml);
+            groups.stream().map((g)->new Object[] {g}).collect(Collectors.toList()).iterator();
+            return List.iterator();
         }
-        XStream xstream = new XStream();
-        xstream.processAnnotations(ContactData.class);
-        List<ContactData> groups = (List<ContactData>) xstream.fromXML(xml);
-        groups.stream().map((g)->new Object[] {g}).collect(Collectors.toList()).iterator();
-        return List.iterator();
     }
 
     @DataProvider
     public Iterator<Object[]>validContactsFromJson() throws IOException {
         List<Object[]> List = new ArrayList<Object[]>();
-        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.json")));
-        String json = "";
-        String line = reader.readLine();
-        while (line != null) {
-            json += line;
-            line = reader.readLine();
+        try(BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contact.json")))){
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<ContactData> groups = gson.fromJson(json, new TypeToken<List<ContactData>>() {
+            }.getType());
+            return groups.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
         }
-        Gson gson = new Gson();
-        List<ContactData> groups = gson.fromJson(json, new TypeToken<List<ContactData>>() {
-        }.getType());
-        return groups.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
     }
+
     @BeforeMethod
     public void ensurePrecondition(){
         app.goTo().groupPage();
@@ -70,7 +71,6 @@ public class ContactCreationTests extends TestBase{
 
     @Test(dataProvider = "validContactsFromJson")
     public void testContactCreation(ContactData contact){
-
         Contacts before = app.contact().all();
         app.contact().initCreation();
         File photo = new File("src/test/resources/photoContact.jpg");
@@ -81,10 +81,4 @@ public class ContactCreationTests extends TestBase{
         assertThat(after, equalTo(
                 before.withAdded(contact.withId(after.stream().mapToInt((c)->c.getId()).max().getAsInt()))));
     }
-
-    @Test
-    public void testCurrentDir(){
-        File currentDir = new File(",");
-    }
-
 }
