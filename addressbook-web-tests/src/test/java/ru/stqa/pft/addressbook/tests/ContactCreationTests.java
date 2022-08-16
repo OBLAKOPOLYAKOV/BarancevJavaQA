@@ -62,8 +62,8 @@ public class ContactCreationTests extends TestBase{
 
     @BeforeMethod
     public void ensurePrecondition(){
-        app.goTo().groupPage();
-        if  (app.group().all().size() == 0){
+        if(app.db().groups().size() ==0){
+            app.goTo().groupPage();
             app.group().create(new GroupData().withName("test2"));
         }
         app.goTo().homaPage();
