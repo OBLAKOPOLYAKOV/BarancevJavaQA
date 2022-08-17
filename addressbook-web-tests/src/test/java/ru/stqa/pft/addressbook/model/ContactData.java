@@ -86,7 +86,11 @@ public class ContactData {
     }
 
     public File photo() {
-        return new File(photo);
+        if (photo != null) {
+            return new File(photo);
+        } else {
+            return null;
+        }
     }
 
     public String allEmails() {
@@ -94,15 +98,28 @@ public class ContactData {
     }
 
     public String bday() {
-        return bday;
+        if (bday != null){
+            return bday;
+        } else {
+            return null;
+        }
+
     }
 
     public String bmonth() {
-        return bmonth;
+        if (bmonth != null){
+            return bmonth;
+        } else {
+            return null;
+        }
     }
 
     public String byear() {
-        return byear;
+        if (byear != null){
+            return byear;
+        } else {
+            return null;
+        }
     }
 
     public String homePhone() {

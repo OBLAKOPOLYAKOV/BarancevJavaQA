@@ -37,8 +37,10 @@ public class HelperBase {
     }
 
     protected void selectedFromTheList(By locator, String text) {
-        wd.findElement(locator).click();
-        new Select(wd.findElement(locator)).selectByVisibleText(text);
+        if (text != null){
+            wd.findElement(locator).click();
+            new Select(wd.findElement(locator)).selectByVisibleText(text);
+        }
     }
 
     public boolean isAlertPresent() {
