@@ -30,19 +30,6 @@ public class ContactData {
     @Type(type = "text")
     private String email;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname) && Objects.equals(address, that.address) && Objects.equals(email, that.email) && Objects.equals(group, that.group) && Objects.equals(mobilePhone, that.mobilePhone);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname, address, email, group, mobilePhone);
-    }
-
     @Column(name = "email2")
     @Type(type = "text")
     private String email2;
@@ -70,14 +57,11 @@ public class ContactData {
     @Type(type = "text")
     private String email3;
     @Expose
-    @Transient
-    private String bday;
+    private int bday;
     @Expose
-    @Transient
     private String bmonth;
     @Expose
-    @Transient
-    private String byear;
+    private int byear;
     @Transient
     @Type(type = "text")
     private String group;
@@ -133,14 +117,9 @@ public class ContactData {
         return allEmails;
     }
 
-    public String bday() {
-        if (bday != null){
-            return bday;
-        } else {
-            return null;
+    public int bday() {
+            return Integer.parseInt(Integer.toString(bday));
         }
-
-    }
 
     public String bmonth() {
         if (bmonth != null){
@@ -150,12 +129,8 @@ public class ContactData {
         }
     }
 
-    public String byear() {
-        if (byear != null){
-            return byear;
-        } else {
-            return null;
-        }
+    public int byear() {
+            return Integer.parseInt(Integer.toString(byear));
     }
 
     public String homePhone() {
@@ -328,16 +303,16 @@ public class ContactData {
         return this;
     }
 
-    public String getBday() {
-        return bday;
+    public int getBday() {
+        return Integer.parseInt(Integer.toString(bday));
     }
 
     public String getBmonth() {
         return bmonth;
     }
 
-    public String getByear() {
-        return byear;
+    public int getByear() {
+        return Integer.parseInt(Integer.toString(byear));
     }
 
     public ContactData withEmail2(String email2) {
@@ -360,7 +335,7 @@ public class ContactData {
         return this;
     }
 
-    public ContactData withBday(String bday) {
+    public ContactData withBday(int bday) {
         this.bday = bday;
         return this;
     }
@@ -370,7 +345,7 @@ public class ContactData {
         return this;
     }
 
-    public ContactData withByear(String byear) {
+    public ContactData withByear(int byear) {
         this.byear = byear;
         return this;
     }

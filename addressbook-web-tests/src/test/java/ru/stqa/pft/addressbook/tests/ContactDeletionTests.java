@@ -19,9 +19,9 @@ public class ContactDeletionTests extends TestBase{
                     .withLastname("Poliakov")
                     .withAddress("Moscow, Pushkina, dom Kolotushkina")
                     .withEmail("test@test.ru")
-                    .withBday("27")
+                    .withBday(27)
                     .withBmonth("September")
-                    .withByear("1996"));
+                    .withByear(1996));
         }
     }
     @Test

@@ -19,9 +19,9 @@ public class ContactModificationTests extends TestBase {
                     .withLastname("Poliakov")
                     .withAddress("Moscow, Pushkina, dom Kolotushkina")
                     .withEmail("test@test.ru")
-                    .withBday("27")
+                    .withBday(27)
                     .withBmonth("September")
-                    .withByear("1996"));
+                    .withByear(1996));
         }
     }
     @Test
@@ -33,9 +33,9 @@ public class ContactModificationTests extends TestBase {
                 .withLastname("PoliakovUpper")
                 .withAddress("Moscow, Tverskaya-Yamskaya, dom 24")
                 .withEmail("test@test.ru")
-                .withBday("27")
+                .withBday(27)
                 .withBmonth("September")
-                .withByear("1996");
+                .withByear(1996);
         app.contact().modify(contact, true);
         assertEquals(app.contact().count(), before.size());
         Contacts after = app.db().contacts();
@@ -51,9 +51,9 @@ public class ContactModificationTests extends TestBase {
                 .withLastname("PoliakovBottom")
                 .withAddress("Moscow, Tverskaya-Yamskaya, dom 24")
                 .withEmail("test@test.ru")
-                .withBday("27")
+                .withBday(27)
                 .withBmonth("September")
-                .withByear("1996");
+                .withByear(1996);
         app.contact().modify(contact, false);
         assertEquals(app.contact().count(), before.size());
         Contacts after = app.db().contacts();
