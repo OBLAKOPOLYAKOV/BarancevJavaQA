@@ -29,9 +29,43 @@ public class ContactData {
     @Column(name = "email")
     @Type(type = "text")
     private String email;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname) && Objects.equals(address, that.address) && Objects.equals(email, that.email) && Objects.equals(group, that.group) && Objects.equals(mobilePhone, that.mobilePhone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstname, lastname, address, email, group, mobilePhone);
+    }
+
     @Column(name = "email2")
     @Type(type = "text")
     private String email2;
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", email2='" + email2 + '\'' +
+                ", email3='" + email3 + '\'' +
+                ", group='" + group + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", home2Phone='" + home2Phone + '\'' +
+                ", workPhone='" + workPhone + '\'' +
+                ", mobilePhone='" + mobilePhone + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
+    }
+
     @Column(name = "email3")
     @Type(type = "text")
     private String email3;
@@ -45,7 +79,9 @@ public class ContactData {
     @Transient
     private String byear;
     @Transient
+    @Type(type = "text")
     private String group;
+
     @Expose
     @Column(name = "home")
     @Type(type = "text")
@@ -123,15 +159,27 @@ public class ContactData {
     }
 
     public String homePhone() {
-        return homePhone;
+        if (homePhone != null){
+            return homePhone;
+        } else {
+            return null;
+        }
     }
 
     public String home2Phone() {
-        return home2Phone;
+        if (home2Phone != null){
+            return home2Phone;
+        } else {
+            return null;
+        }
     }
 
     public String workPhone() {
-        return workPhone;
+        if (workPhone != null){
+            return workPhone;
+        } else {
+            return null;
+        }
     }
 
     public String mobilePhone() {
@@ -147,11 +195,19 @@ public class ContactData {
     }
 
     public String email2() {
-        return email2;
+        if (email2 != null){
+            return email2;
+        } else {
+            return null;
+        }
     }
 
     public String email3() {
-        return email3;
+        if (email3 != null){
+            return email3;
+        } else {
+            return null;
+        }
     }
 
     public String getAllPhones() {
@@ -159,15 +215,27 @@ public class ContactData {
     }
 
     public String getHomePhone() {
-        return homePhone;
+        if (homePhone != null){
+            return homePhone;
+        } else {
+            return null;
+        }
     }
 
     public String getHome2Phone() {
-        return home2Phone;
+        if (home2Phone != null){
+            return home2Phone;
+        } else {
+            return null;
+        }
     }
 
     public String getWorkPhone() {
-        return workPhone;
+        if (workPhone != null){
+            return workPhone;
+        } else {
+            return null;
+        }
     }
 
     public String getMobilePhone() {
@@ -175,7 +243,11 @@ public class ContactData {
     }
 
     public String getGroup() {
-        return group;
+        if (group != null){
+            return group;
+        } else {
+            return null;
+        }
     }
 
     public int getId() {
@@ -311,30 +383,6 @@ public class ContactData {
     public ContactData withPhoto(File photo) {
         this.photo = photo.getPath();
         return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(lastname, that.lastname) && Objects.equals(firstname, that.firstname) && Objects.equals(address, that.address);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstname, lastname, address);
-    }
-
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address='" + address + '\'' +
-                ", mobilePhone='" + mobilePhone + '\'' +
-                '}';
     }
 
 }

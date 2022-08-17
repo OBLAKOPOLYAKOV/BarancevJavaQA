@@ -8,25 +8,5 @@
     "bmonth": "September",
     "byear": "1991",
     "mobilePhone": "89951678810"
-  },
-  {
-    "firstname": "Name1",
-    "lastname": "LastName1",
-    "address": "Test Address-1",
-    "email": "test1@test.com",
-    "bday": "21",
-    "bmonth": "September",
-    "byear": "1991",
-    "mobilePhone": "89951678811"
-  },
-  {
-    "firstname": "Name2",
-    "lastname": "LastName2",
-    "address": "Test Address-2",
-    "email": "test2@test.com",
-    "bday": "21",
-    "bmonth": "September",
-    "byear": "1991",
-    "mobilePhone": "89951678812"
   }
 ]
