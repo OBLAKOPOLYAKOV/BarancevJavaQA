@@ -95,7 +95,7 @@ public class ContactDataGenerator {
                     .withMobilePhone(String.format("8995167881%s", i))
                     .withBday(21)
                     .withBmonth("September")
-                    .withByear(1991));
+                    .withByear("1991"));
         }
         return contacts;
     }

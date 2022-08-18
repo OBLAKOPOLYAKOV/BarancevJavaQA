@@ -21,7 +21,7 @@ public class ContactDeletionTests extends TestBase{
                     .withEmail("test@test.ru")
                     .withBday(27)
                     .withBmonth("September")
-                    .withByear(1996));
+                    .withByear("1996"));
         }
     }
     @Test

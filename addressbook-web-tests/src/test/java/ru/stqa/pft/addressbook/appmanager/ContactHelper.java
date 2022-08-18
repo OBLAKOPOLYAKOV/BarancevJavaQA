@@ -28,7 +28,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("mobile"),contactData.mobilePhone());
         selectedFromTheList(By.name("bday"), Integer.toString(contactData.bday()));
         selectedFromTheList(By.name("bmonth"), contactData.bmonth());
-        type(By.name("byear"), Integer.toString(contactData.byear()));
+        type(By.name("byear"), contactData.byear());
 
         if (creation){
             new Select(wd.findElement(By.name("new_group"))).selectByIndex(0);
