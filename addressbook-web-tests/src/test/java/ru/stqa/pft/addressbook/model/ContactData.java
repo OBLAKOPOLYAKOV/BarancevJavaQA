@@ -34,25 +34,6 @@ public class ContactData {
     @Type(type = "text")
     private String email2;
 
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", address='" + address + '\'' +
-                ", email='" + email + '\'' +
-                ", email2='" + email2 + '\'' +
-                ", email3='" + email3 + '\'' +
-                ", group='" + group + '\'' +
-                ", homePhone='" + homePhone + '\'' +
-                ", home2Phone='" + home2Phone + '\'' +
-                ", workPhone='" + workPhone + '\'' +
-                ", mobilePhone='" + mobilePhone + '\'' +
-                ", photo='" + photo + '\'' +
-                '}';
-    }
-
     @Column(name = "email3")
     @Type(type = "text")
     private String email3;
@@ -77,18 +58,38 @@ public class ContactData {
                 && (email == null || that.email == null || Objects.equals(email, that.email))
                 && (email2 == null || that.email2 == null || Objects.equals(email2, that.email2))
                 && (email3 == null || that.email3 == null || Objects.equals(email3, that.email3))
-                && Objects.equals(bmonth, that.bmonth)
-                && Objects.equals(byear, that.byear)
-                && Objects.equals(group, that.group)
                 && (homePhone == null || that.homePhone == null || Objects.equals(homePhone, that.homePhone))
                 && (home2Phone == null || that.home2Phone == null || Objects.equals(home2Phone, that.home2Phone))
-                && (workPhone == null || that.workPhone == null || Objects.equals(workPhone, that.workPhone))
-                && (mobilePhone == null || that.mobilePhone == null || Objects.equals(mobilePhone, that.mobilePhone));
+                && (workPhone == null || that.workPhone == null || Objects.equals(workPhone, that.workPhone));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname, address, email, email2, email3, bday, bmonth, byear, group, homePhone, home2Phone, workPhone, mobilePhone);
+        return Objects.hash(id, firstname, lastname, address);
+    }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", email2='" + email2 + '\'' +
+                ", email3='" + email3 + '\'' +
+                ", bday=" + bday +
+                ", bmonth='" + bmonth + '\'' +
+                ", byear='" + byear + '\'' +
+                ", group='" + group + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", home2Phone='" + home2Phone + '\'' +
+                ", workPhone='" + workPhone + '\'' +
+                ", mobilePhone='" + mobilePhone + '\'' +
+                ", allPhones='" + allPhones + '\'' +
+                ", allEmails='" + allEmails + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
     }
 
     @Transient
@@ -151,43 +152,23 @@ public class ContactData {
         }
 
     public String bmonth() {
-        if (bmonth != null){
-            return bmonth;
-        } else {
-            return null;
-        }
+        return bmonth;
     }
 
     public String byear() {
-        if (byear != null){
-            return byear;
-        } else {
-            return null;
-        }
+        return byear;
     }
 
     public String homePhone() {
-        if (homePhone != null){
-            return homePhone;
-        } else {
-            return null;
-        }
+        return homePhone;
     }
 
     public String home2Phone() {
-        if (home2Phone != null){
-            return home2Phone;
-        } else {
-            return null;
-        }
+        return home2Phone;
     }
 
     public String workPhone() {
-        if (workPhone != null){
-            return workPhone;
-        } else {
-            return null;
-        }
+        return workPhone;
     }
 
     public String mobilePhone() {
@@ -203,19 +184,11 @@ public class ContactData {
     }
 
     public String email2() {
-        if (email2 != null){
-            return email2;
-        } else {
-            return null;
-        }
+        return email2;
     }
 
     public String email3() {
-        if (email3 != null){
-            return email3;
-        } else {
-            return null;
-        }
+        return email3;
     }
 
     public String getAllPhones() {
@@ -223,27 +196,15 @@ public class ContactData {
     }
 
     public String getHomePhone() {
-        if (homePhone != null){
-            return homePhone;
-        } else {
-            return null;
-        }
+        return homePhone;
     }
 
     public String getHome2Phone() {
-        if (home2Phone != null){
-            return home2Phone;
-        } else {
-            return null;
-        }
+        return home2Phone;
     }
 
     public String getWorkPhone() {
-        if (workPhone != null){
-            return workPhone;
-        } else {
-            return null;
-        }
+        return workPhone;
     }
 
     public String getMobilePhone() {
@@ -251,11 +212,7 @@ public class ContactData {
     }
 
     public String getGroup() {
-        if (group != null){
-            return group;
-        } else {
-            return null;
-        }
+        return group;
     }
 
     public int getId() {
