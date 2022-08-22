@@ -61,6 +61,11 @@ public class ContactHelper extends HelperBase{
         wd.findElement(By.cssSelector("input[id='"+ id +"']")).click();
     }
 
+    public void selectGroupFromListById(int id) {
+        wd.findElement(By.name("group")).click();
+        new Select(wd.findElement(By.name("group"))).selectByValue(String.valueOf(id));
+    }
+
     public void submitContactModificationUpper() {
         click(By.xpath("//input[@value='Update'][1]"));
     }
@@ -73,9 +78,14 @@ public class ContactHelper extends HelperBase{
         click(By.xpath("//input[@value='Add to']"));
     }
 
+    public void submitContactRemoveFromGroup() {
+        click(By.xpath("//input[@name='remove']"));
+    }
+
     public void selectContactWithoutGroup(){
         selectedFromTheList(By.name("group"),"[none]" );
     }
+
 
     public void create(ContactData contact) {
         initCreation();
@@ -162,6 +172,12 @@ public class ContactHelper extends HelperBase{
         submitAddContactToGroup();
 
 
+    }
+
+    public void delContactFromGroup(ContactData contact, GroupData groupDeletion) {
+        selectGroupFromListById(groupDeletion.getId());
+        selectContactById(contact.getId());
+        submitContactRemoveFromGroup();
     }
 
 
