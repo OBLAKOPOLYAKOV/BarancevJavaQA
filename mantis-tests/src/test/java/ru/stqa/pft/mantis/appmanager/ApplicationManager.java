@@ -7,6 +7,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
@@ -17,8 +18,10 @@ public class ApplicationManager {
     private Properties properties;
     private final String browser;
     private RegistrationHelper registrationHelper;
+    private UserHelper userHelper;
     private FtpHelper ftp;
     private MailHelper mailHelper;
+    private DbHelper dbHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -28,8 +31,13 @@ public class ApplicationManager {
     public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
+        dbHelper = new DbHelper();
     }
 
+    public void loginAdmin() throws IOException {
+        String target = System.getProperty("target", "local");
+        properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
+    }
     public void stop() {
         if (wd != null) {
             wd.quit();
@@ -49,6 +57,13 @@ public class ApplicationManager {
             registrationHelper = new RegistrationHelper(this);
         }
         return registrationHelper;
+    }
+
+    public UserHelper user() {
+        if (userHelper == null) {
+            userHelper = new UserHelper(this);
+        }
+        return userHelper;
     }
 
     public FtpHelper ftp(){
@@ -78,5 +93,8 @@ public class ApplicationManager {
             mailHelper = new MailHelper(this);
         }
         return mailHelper;
+    }
+    public DbHelper db() {
+        return dbHelper;
     }
 }
