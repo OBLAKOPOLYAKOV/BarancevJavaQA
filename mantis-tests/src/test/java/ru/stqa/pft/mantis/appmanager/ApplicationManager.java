@@ -25,6 +25,7 @@ public class ApplicationManager implements WebDriver {
     private RegistrationHelper registrationHelper;
     private NavigationHelper navigationHelper;
     private UserHelper userHelper;
+    private SoapHelper soapHelper;
     private FtpHelper ftp;
     private MailHelper mailHelper;
     private DbHelper dbHelper;
@@ -176,5 +177,12 @@ public class ApplicationManager implements WebDriver {
     @Override
     public Options manage() {
         return null;
+    }
+
+    public SoapHelper soap(){
+        if (soapHelper == null){
+            soapHelper = new SoapHelper(this);
+        }
+        return soapHelper;
     }
 }
