@@ -5,14 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa9ad923-7bbc-42e1-9dc8-112192b00c78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/Issue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestAssuredTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/appmanager/ApplicationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rest-sample/src/test/resources/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap-sample/build/classes/java/test/ru/stqa/pft/soap/GeoIpServiceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../soap-sample/build/classes/java/test/ru/stqa/pft/soap/GeoIpServiceTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220823T161344.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220823T161815.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220823T163706.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220823T163852.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220825T114840.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220825T160020.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T103304.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T103410.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T104019.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T104202.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T104534.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T104807.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T104849.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T105214.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T105543.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T105659.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T105813.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T105848.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T110248.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T110524.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T110759.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T110854.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T111310.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T111745.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T111758.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T141759.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T141853.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T141921.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T142001.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T142027.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T145014.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T150845.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T150930.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T151105.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T160338.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T160652.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T161247.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T161334.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T161939.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T162103.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T162114.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T163006.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T163058.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T163202.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/test-20220826T163349.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/classes/java/test/ru/stqa/pft/rest/Issue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/classes/java/test/ru/stqa/pft/rest/RestTests$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/classes/java/test/ru/stqa/pft/rest/RestTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/reports/tests/test/classes/ru.stqa.pft.rest.RestTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/reports/tests/test/packages/ru.stqa.pft.rest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/test-results/test/TEST-ru.stqa.pft.rest.RestTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/model/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestAssuredTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestAssuredTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +97,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/../soap-sample">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/../rest-sample">
           <activation />
         </task>
         <projects_view>
@@ -98,7 +155,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "jbr-11",
-    "last_opened_file_path": "D:/javacourse/BarancevJavaQA/addressbook-web-tests",
+    "last_opened_file_path": "D:/javacourse/BarancevJavaQA/rest-sample/src/test/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -113,6 +170,7 @@
       <recent name="ru.stqa.pft.addressbook.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javacourse\BarancevJavaQA\rest-sample\src\test\resources" />
       <recent name="D:\javacourse\BarancevJavaQA\mantis-tests\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -122,11 +180,11 @@
       <recent name="ru.stqa.mantis.tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RestTests">
-    <configuration name="GeoIpServiceTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RestAssuredTests (1)">
+    <configuration name="RestAssuredTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../soap-sample" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../rest-sample" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -136,7 +194,76 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.soap.GeoIpServiceTests&quot;" />
+            <option value="&quot;ru.stqa.pft.rest.tests.RestAssuredTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestAssuredTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../rest-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.rest.RestAssuredTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestAssuredTests.testCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../rest-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.rest.RestAssuredTests.testCreateIssue&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestTests (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../rest-sample" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.rest.tests.RestTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -160,29 +287,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.stqa.pft.rest.RestTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RestTests.testCreateIssue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../rest-sample" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.stqa.pft.rest.RestTests.testCreateIssue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,55 +351,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.mantis.tests.RegistrationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SoapTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.pft.mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.stqa.pft.mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.mantis.tests.SoapTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Gradle.RestTests.testCreateIssue" />
+      <item itemvalue="Gradle.RestAssuredTests" />
+      <item itemvalue="Gradle.RestAssuredTests (1)" />
+      <item itemvalue="Gradle.RestAssuredTests.testCreateIssue" />
+      <item itemvalue="Gradle.RestTests (1)" />
       <item itemvalue="Gradle.RestTests" />
-      <item itemvalue="Gradle.GeoIpServiceTests" />
       <item itemvalue="TestNG.ContactCreationTests" />
-      <item itemvalue="TestNG.SoapTests" />
-      <item itemvalue="TestNG.RegistrationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RestAssuredTests (1)" />
+        <item itemvalue="Gradle.RestTests (1)" />
+        <item itemvalue="Gradle.RestAssuredTests" />
+        <item itemvalue="Gradle.RestAssuredTests.testCreateIssue" />
         <item itemvalue="Gradle.RestTests" />
-        <item itemvalue="Gradle.RestTests.testCreateIssue" />
-        <item itemvalue="TestNG.SoapTests" />
-        <item itemvalue="Gradle.GeoIpServiceTests" />
-        <item itemvalue="TestNG.RegistrationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -450,14 +520,19 @@
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestTests.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java</url>
+          <line>34</line>
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/RestTests.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/RestTests.java</url>
+          <line>22</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/pft/rest/tests/TestBase.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

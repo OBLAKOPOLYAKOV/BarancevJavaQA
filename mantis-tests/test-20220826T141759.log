@@ -1,2 +1,0 @@
-166  [Test worker] DEBUG org.testng.TestNG - suiteXmlPath: "D:\javacourse\BarancevJavaQA\mantis-tests\scr\test\resources\testng.xml"
-181  [Test worker] ERROR org.testng.TestNG - No test suite found. Nothing to run
