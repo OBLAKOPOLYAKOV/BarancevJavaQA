@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa9ad923-7bbc-42e1-9dc8-112192b00c78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/SoapHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Issue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../soap-sample/src/test/java/ru/stqa/pft/soap/GeoIpServiceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/ApplicationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/HttpSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/HttpSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/UserHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/appmanager/UserHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/tests/ChangePasswordFromAdminTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/classes/java/test/ru/stqa/pft/mantis/tests/ChangePasswordFromAdminTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/appmanager/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/appmanager/ApplicationManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/appmanager/SoapHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/appmanager/SoapHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/model/Issue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/model/Issue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/LoginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/SoapTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/SoapTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/TestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/classes/ru/stqa/pft/mantis/tests/TestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/out/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/out/test/resources/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/SoapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/SoapHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/model/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/SoapTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap-sample/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../soap-sample/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantis-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mantis-tests/src/test/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,6 +416,26 @@
           <url>file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/HttpSession.java</url>
           <line>29</line>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/pft/mantis/appmanager/SoapHelper.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

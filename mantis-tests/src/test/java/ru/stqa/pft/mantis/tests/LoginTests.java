@@ -13,8 +13,8 @@ public class LoginTests extends TestBase {
     @Test
     public void testLogin() throws IOException {
         HttpSession session = app.newSession();
-        assertTrue(session.Login("administrator", "root"));
-        assertTrue(session.isLoggedInAs("administrator"));
+        assertTrue(session.Login(app.getProperty("web.adminLogin"), app.getProperty("web.adminPassword")));
+        assertTrue(session.isLoggedInAs(app.getProperty("web.adminLogin")));
 
     }
 }
