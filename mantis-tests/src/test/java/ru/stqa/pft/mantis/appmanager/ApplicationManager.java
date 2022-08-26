@@ -107,6 +107,9 @@ public class ApplicationManager implements WebDriver {
         return dbHelper;
     }
     public NavigationHelper goTo() {
+        if (navigationHelper ==null){
+            navigationHelper = new NavigationHelper(this);
+        }
         return navigationHelper;
     }
 

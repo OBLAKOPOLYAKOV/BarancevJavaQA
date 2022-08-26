@@ -14,9 +14,6 @@ public class NavigationHelper extends SessionHelper{
     }
 
     public void settingUserPage() {
-        if(isElementPresent(By.className("breadcrumbs"))){
-            return;
-        }
         click(By.xpath("//a[contains(@href, '/manage_user_page.php')]"));
     }
 }

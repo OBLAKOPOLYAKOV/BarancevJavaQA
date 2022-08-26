@@ -30,10 +30,17 @@ public class ChangePasswordFromAdminTests extends TestBase{
 
     @Test
     public void testChangePassword() throws IOException {
+        String password = "newPasswod";
         Users allUser = app.db().users();
         UserData user = allUser.iterator().next();
         app.user().loginAdmin();
-        app.user().changePasswordByAdmin(user);
+        app.user().initChangePasswordByAdmin(user);
+        List<MailMessage> mailMessages = app.mail().waitForMail(1, 10000);
+        String confirmationLink = app.user().findConfirmationLink(mailMessages, user.getEmail());
+        app.user().confirmChangePasswordInEmailForm(user.getUserName(),
+                confirmationLink, password);
+        assertTrue(app.newSession().Login(user.getUserName(), password));
+
 
     }
 

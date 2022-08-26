@@ -5,10 +5,7 @@ import ru.lanwen.verbalregex.VerbalExpression;
 import ru.stqa.pft.mantis.model.MailMessage;
 import ru.stqa.pft.mantis.model.UserData;
 
-import java.io.File;
-import java.io.FileReader;
 import java.util.List;
-import java.util.Properties;
 
 public class UserHelper extends HelperBase {
 
@@ -30,10 +27,19 @@ public class UserHelper extends HelperBase {
         click(By.cssSelector("input[type='submit']"));
     }
 
-    public void changePasswordByAdmin(UserData user) {
+    public void initChangePasswordByAdmin(UserData user) {
         app.goTo().settingPage();
         app.goTo().settingUserPage();
-        click(By.xpath("//a[contains(@href, '?user_id="+user.getId()+"')]"));
+        click(By.xpath("//a[contains(@href,'user_id="+user.getId()+"')]"));
+        click(By.xpath("//form[@id='manage-user-reset-form']//input[@class='btn btn-primary btn-white btn-round']"));
 
+    }
+
+    public void confirmChangePasswordInEmailForm(String userName, String confirmationLink, String password) {
+        wd.get(confirmationLink);
+        type(By.id("realname"), userName);
+        type(By.name("password"), password);
+        type(By.name("password_confirm"), password);
+        click(By.cssSelector("button[type='submit']"));
     }
 }
