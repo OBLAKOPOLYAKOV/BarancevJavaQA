@@ -51,6 +51,6 @@ public class HttpSession {
         HttpGet get = new HttpGet(app.getProperty("web.baseUrl")+"/index.php");
         CloseableHttpResponse response = httpclient.execute(get);
         String body = geTextFrom(response);
-        return body.contains(String.format("<a href=\"/mantisbt-2.25.4/account_page.php\">%s</a>", username));
+        return body.contains(String.format("<a href=\"/%s/account_page.php\">%s</a>",app.getProperty("web.baseDomainName"), username));
     }
 }
